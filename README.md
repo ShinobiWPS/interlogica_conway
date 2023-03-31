@@ -1,1 +1,0 @@
-# interlogica_conway
