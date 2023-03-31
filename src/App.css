@@ -1,0 +1,104 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  --light-accent-color: #7ebaff;
+  --dark-accent-color: orange;
+}
+
+.app {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 0;
+  text-shadow: 0 0 10px var(--light-accent-color);
+  transition: text-shadow 0.2s ease;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 500px;
+  width: 500px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 10px;
+}
+
+.cell {
+  background-color: #999;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  height: 10px;
+  width: 10px;
+  opacity: 0;
+}
+
+.cell.alive {
+  background-color: #333;
+  opacity: 1;
+}
+
+.controls {
+  margin-top: 1em;
+}
+
+.controls button {
+  background-color: #7ebaff;
+}
+
+button {
+  border: none;
+  color: white;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  margin: 0 0.5em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+button:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+@media (prefers-color-scheme: dark) {
+  h1 {
+    margin-top: 0;
+    text-shadow: 0 0 10px var(--dark-accent-color);
+  }
+
+  .cell {
+    background-color: inherit;
+    transition: background-color 0.2s ease, opacity 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .cell.alive {
+    background-color: var(--dark-accent-color);
+    box-shadow: 0 0 10px 2px orange;
+  }
+
+  .controls button {
+    background-color: var(--dark-accent-color);
+    color: #222;
+  }
+
+  .controls button:hover {
+    background-color: #ff9800;
+  }
+}
