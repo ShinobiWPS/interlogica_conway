@@ -1,3 +1,6 @@
+## ⚠️ Switch theme of your OS between Light and Dark!
+
+
 The `Board` component is a React functional component that renders a grid of cells that follow the rules of Conway's Game of Life. The component takes in three props:
 
 -   `rows`: the number of rows in the grid
